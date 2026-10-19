@@ -2,16 +2,16 @@
 import json
 import sys
 
-# Mínimos (estrictamente mayores) definidos en la memoria, diapositiva "Pipeline CI/CD con puertas de calidad".
+# Mínimos (inclusivos: accuracy ≥ 90, precision ≥ 85, recall ≥ 85, F1 ≥ 88) definidos en la memoria, diapositiva "Pipeline CI/CD con puertas de calidad".
 GATE = {"accuracy": 90, "precision": 85, "recall": 85, "f1_score": 88}
 
 
 def evaluate(metrics: dict) -> list[str]:
     """Devuelve la lista de fallos; vacía si el modelo puede promocionarse."""
     return [
-        f"{name} {metrics[name]} <= {minimum}"
+        f"{name} {metrics[name]} < {minimum}"
         for name, minimum in GATE.items()
-        if not metrics[name] > minimum
+        if metrics[name] < minimum
     ]
 
 
