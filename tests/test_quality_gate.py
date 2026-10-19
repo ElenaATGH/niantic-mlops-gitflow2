@@ -3,6 +3,7 @@ from niantic_mlops.quality_gate import evaluate
 
 def test_modelo_v2_pasa_la_puerta():
     assert evaluate({"accuracy": 93, "precision": 91, "recall": 90, "f1_score": 90}) == []
+    assert evaluate({"accuracy": 90, "precision": 85, "recall": 85, "f1_score": 88}) == []  # mínimos inclusivos
 
 
 def test_modelo_en_crisis_semana_7_se_bloquea():
