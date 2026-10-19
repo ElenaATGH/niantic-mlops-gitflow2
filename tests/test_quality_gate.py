@@ -12,3 +12,11 @@ def test_modelo_en_crisis_semana_7_se_bloquea():
 
 def test_accuracy_89_se_bloquea():
     assert evaluate({"accuracy": 89, "precision": 91, "recall": 90, "f1_score": 90})
+
+
+def test_metricas_de_la_semana_7_del_repositorio_bloquean_el_despliegue():
+    import json
+    from pathlib import Path
+
+    datos = Path(__file__).resolve().parent.parent / "data" / "metrics_semana7.json"
+    assert len(evaluate(json.loads(datos.read_text(encoding="utf-8")))) == 4
