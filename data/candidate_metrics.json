@@ -1,1 +1,1 @@
-{"model": "churn", "version": "2.0", "accuracy": 93, "precision": 91, "recall": 90, "f1_score": 90}
+{"model": "churn", "version": "2.0.1", "accuracy": 93, "precision": 91, "recall": 90, "f1_score": 90}
