@@ -1,4 +1,7 @@
 # Changelog
+## [3.0.0-rc1] - en preparación (release/v3.0)
+- Candidato VPS Failure Predictor v3.0 (accuracy 95 %). Pendiente de staging y aprobación del Business Owner.
+
 ## [2.0.1] - 2026-10-19 (hotfix/v2.0.1)
 - Modelo reentrenado con ventana ampliada: accuracy 93, precision 91, recall 90, F1 90 (la puerta de calidad bloqueó el primer intento, accuracy 88).
 - Puerta de calidad con mínimos inclusivos (≥).
